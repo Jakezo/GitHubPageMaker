@@ -1,0 +1,11 @@
+moon9342 :
+  username: Jakezo    # user name : martin
+  name: Jakezo        # user full name : Martin Luther King
+  url_full:             # Homepage url
+  url:
+  bio: 코드 코딩 코더
+  # 회사정보
+  picture: assets/built/images/author-logo.jpg   # author image
+  facebook:             # facebook ID
+  twitter:              # twitter ID
+  cover: False

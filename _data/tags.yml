@@ -1,0 +1,12 @@
+java :
+  name: java
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+jsp :
+  name: jsp
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+economy :
+  name: economy
+  description: False
+  cover: assets/built/images/background-frontend.jpg
