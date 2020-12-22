@@ -17,7 +17,7 @@ production stylesheet in assets/built/screen.css
     width: 80%;
     max-width: 800px;
     margin: 4rem auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "나눔고딕코딩", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -126,6 +126,10 @@ td.code {
     border: none;
     min-width: 100%;
     max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling:touch;
+
+
 }
 
 .highlight table,
@@ -143,4 +147,343 @@ td.code {
 .highlight table td:first-child,
 .highlight table td:last-child {
     background: none;
+}
+/*
+!*여기서부턴 코드 css 새로만든거임*!
+
+pre[data-ke-type='codeblock'] {
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    line-height: 17px;
+}
+pre[data-ke-type='codeblock'] > code {
+    display: block;
+    overflow-x: auto;
+    font-family: consolas, monospace;
+}
+pre[data-ke-type='codeblock'] > code.lnWrap {
+    position: relative;
+    padding-left: 40px;
+}
+
+pre[data-ke-type='codeblock'] > code .ln[data-ln]::before,
+pre[data-ke-type='codeblock'] > code .ln[data-ln--before]::before {
+    content: attr(data-ln);
+}
+
+pre[data-ke-type='codeblock'] > code .ln,
+pre[data-ke-type='codeblock'] > code .lnBorder {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 40px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+pre[data-ke-type='codeblock'] > code .lnBorder {
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-right-color: #ccc;
+}
+
+pre[data-ke-type='codeblock'] > code .ln {
+    z-index: 0;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+pre[data-ke-type='codeblock'] > code .lc {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding-left: 10px;
+}
+pre[data-ke-type='codeblock'] > code.noline .lc {
+    padding-left: 0;
+}
+
+pre[data-ke-type='codeblock'] > code .ln.marker {
+    background-color: rgba(40, 70, 100, 1);
+    background: linear-gradient(to left, rgba(40, 70, 100, 1) 60%, transparent);
+    color: white !important;
+}
+pre[data-ke-type='codeblock'] > code .lc.marker {
+    background-color: rgba(40, 70, 100,1);
+    background: linear-gradient(to right, rgba(40, 70, 100, 1) 80%, transparent);
+}
+
+pre[data-ke-type='codeblock'] > code .lnA { }
+pre[data-ke-type='codeblock'] > code .lnB { }
+
+pre[data-ke-type='codeblock'] > code .colBox {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    vertical-align: middle;
+    margin-right: 4px;
+    outline: 1px solid grey;
+}
+
+pre[data-ke-type='codeblock'] > code .hover, pre[data-ke-type='codeblock'] > code .clicked {
+    outline: solid 1px gold;
+}
+pre[data-ke-type='codeblock'] > code .solo:hover {
+    color: red;
+}*/
+
+/*글자 화면에 써지는대로 되도록 수정했습니다 엔터같은거 */
+.post-full-content p{
+
+    white-space:pre-wrap;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/*gist 예시 1 */
+
+/*
+
+body .gist .gist-file {
+    border: none;
+    border-bottom: none;
+}
+
+body .gist .gist-data {
+    background: #293134;
+    border-radius: 4px 4px 0 0;
+    color: #A0A8B3;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 16px 16px 0;
+}
+
+body .gist .gist-data .blob-wrapper {
+    max-width: 100%;
+    padding-bottom: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+body .gist .highlight {
+    background: #293134;
+    max-width: 800px;
+    overflow-x: scroll;
+    border: none;
+}
+
+body .gist .highlight td, body .gist .highlight tbody {
+    border: none;
+}
+
+body .gist .blob-num,
+body .gist .blob-code-inner,
+body .gist .pl-ent,
+body .gist .pl-s1,
+body .gist .pl-s1 .pl-s2,
+body .gist .pl-smi,
+body .gist .pl-smp,
+body .gist .pl-stj,
+body .gist .pl-vo,
+body .gist .pl-vpf {
+    color: #e0e2e4;
+}
+
+body .gist .pl-c,
+body .gist .pl-c span {
+    color: #66747b;
+    font-style: italic;
+}
+
+body .gist .pl-mb {
+    color: #ec7600;
+    font-weight: 700;
+}
+
+body .gist .pl-mh .pl-en {
+    color: #66747b;
+    font-weight: 700;
+}
+
+body .gist .pl-mi {
+    color: #93c763;
+    font-style: italic;
+}
+
+body .gist .pl-sc {
+    color: #96989a;
+}
+
+body .gist .pl-st {
+    color: #da4236;
+}
+
+body .gist .pl-c1 > .pl-c1 {
+    color: #678cb1;
+}
+
+body .gist .pl-c1,
+body .gist .pl-sr .pl-cce {
+    color: #ffcd22;
+}
+
+body .gist .pl-e,
+body .gist .pl-k,
+body .gist .pl-mdh,
+body .gist .pl-mdr,
+body .gist .pl-ml,
+body .gist .pl-mm,
+body .gist .pl-mo,
+body .gist .pl-mp,
+body .gist .pl-mr,
+body .gist .pl-ms,
+body .gist .pl-s1 .pl-v,
+body .gist .pl-s3 {
+    color: #93c763;
+}
+
+body .gist .pl-en,
+body .gist .pl-v {
+    color: #678cb1;
+}
+
+body .gist .pl-mh,
+body .gist .pl-mq {
+    color: #66747b;
+}
+
+body .gist .pl-pds,
+body .gist .pl-s,
+body .gist .pl-s1 .pl-pse .pl-s2,
+body .gist .pl-sv {
+    color: #ec7600;
+}
+
+body .gist .pl-sr,
+body .gist .pl-sr .pl-sra,
+body .gist .pl-sr .pl-sre,
+body .gist .pl-src {
+    color: #d39745;
+}
+
+body .gist .pl-mi1,
+body .gist .pl-mdht {
+    color: #e0e2e4;
+    background: rgba(0, 64, 0, 0.5);
+}
+
+body .gist .pl-md,
+body .gist .pl-mdhf,
+body .gist .pl-id,
+body .gist .pl-ii {
+    color: #e0e2e4;
+    background: rgba(64, 0, 0, 0.5);
+}
+
+body .gist .gist-meta {
+    background: #ccc;
+    border-radius: 0 0 4px 4px;
+    font-size: 14px;
+    padding: 6px 16px;
+}
+
+body .gist .gist-meta a {
+    color: #E96B2C;
+}
+
+body .gist .gist-meta a:hover {
+    text-decoration: underline;
+}
+*/
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+
+.gist{
+
+    max-width:100%!important
+}
+
+body .gist .highlight{
+    background:#002240;
+    font-family: 'Droid Sans Mono', monospace
+
+}
+body .gist .blob-code-inner,body .gist .blob-num,body .gist .pl-en{
+    color:lightcyan;
+    font-size:15px
+}
+body .gist .pl-mb,body .gist .pl-mh .pl-en{
+    font-weight:700
+}
+body .gist .pl-ent,body .gist .pl-v{
+    color:#fd0;
+    font-size:15px
+}
+body .gist .pl-mh,body .gist .pl-mh .pl-en,body .gist .pl-sr .pl-cce{
+    color:#eb939a;
+    font-size:15px
+}
+body .gist .pl-pds,body .gist .pl-s,body .gist .pl-s1,body .gist .pl-s1 .pl-pse .pl-s2,body .gist .pl-s1 .pl-v{
+    color:#3ad900;font-size:15px
+}
+body .gist .pl-s1 .pl-s2,body .gist .pl-smi,body .gist .pl-smp,body .gist .pl-stj,body .gist .pl-vo,body .gist .pl-vpf{
+    color:crimson;
+    font-size:15px
+}
+
+body .gist .pl-s3,body .gist .pl-sc{
+    color:#ffb054;font-size:15px
+}
+body .gist .pl-sr,body .gist .pl-sr .pl-sra,body .gist .pl-sr .pl-sre,body .gist .pl-src{
+    color:#80ffc2;font-size:15px
+}
+
+body .gist .pl-mdht,body .gist .pl-mi1{
+    color:#f8f8f8;
+    font-size:15px;
+    background:rgba(0,64,0,.5)
+}
+body .gist .pl-id,body .gist .pl-ii,body .gist .pl-md,body .gist .pl-mdhf{
+    color:#f8f8f8;
+    font-size:15px;
+    background:#800f00
+}
+body .gist .highlight-source-js .pl-st{
+    color:#ffee80;
+    font-size:15px
+}
+body .gist .highlight-source-css .pl-s3{
+    color:#80ffbb;
+    font-size:15px
+}
+body .gist .highlight-text-html-basic .pl-ent{
+    color:#9effff;
+    font-size:15px
+}
+
+body .gist .pl-c,body .gist .pl-c span,body .gist .pl-mq{
+    font-size:15px;
+    color: palegoldenrod;
+
+}
+
+body .gist .pl-c1,body .gist .pl-mb,body .gist .pl-sv{
+    color:#ff628c;
+    font-size:15px
+}
+body .gist .pl-e,body .gist .pl-k,body .gist .pl-mdh,body .gist .pl-mdr,body .gist .pl-mi,body .gist .pl-ml,body .gist .pl-mm,body .gist .pl-mo,body .gist .pl-mp,body .gist .pl-mr,body .gist .pl-ms,body .gist .pl-st{
+    color:#ff9d00;
+    font-size:15px
 }

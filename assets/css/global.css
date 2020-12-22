@@ -10,8 +10,8 @@
     --red: #f05230;
     --darkgrey: #15171A;
     --midgrey: #738a94;
-    --lightgrey: #c5d2d9;
-    --whitegrey: #e5eff5;
+    --lightgrey: #160f2f;
+    --whitegrey: #ffffff;
     --pink: #fa3a57;
     --brown: #a3821a;
 }
@@ -138,6 +138,7 @@ html {
 *,
 *:before,
 *:after {
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 a {
@@ -337,6 +338,16 @@ ol,
 dl,
 blockquote {
     margin: 0 0 1.5em 0;
+
+}
+
+p,
+ul,
+ol,
+dl
+  {
+
+    padding: 0 0.4em 0.5em;
 }
 
 ol,
@@ -390,6 +401,7 @@ blockquote p {
     margin: 0.8em 0;
     font-size: 1.2em;
     font-weight: 300;
+
 }
 
 blockquote small {

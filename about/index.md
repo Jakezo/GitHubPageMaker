@@ -7,4 +7,5 @@ logo: 'assets/images/ghost.png'
 class: page-template
 subclass: 'post page'
 ---
-얄루
+
+열심히 `코드`를 배워 봅시다! `파이팅` `!` `!`

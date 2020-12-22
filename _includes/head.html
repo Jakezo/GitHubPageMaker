@@ -1,8 +1,12 @@
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}{{ site.favicon }}" type="image/png" />
+   <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}{{ site.favicon }}" type="image/x-ico" />
+
+<!--<link rel="shortcut icon" href="https://jakezo.github.io/assets/built/images/favicon.ico" />-->
+
+<!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-ico" />-->
+
     <link rel="canonical" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-
     {% if page.content and page.current == 'post' or page.current == 'about' %}
         {% assign excerpt = page.content | strip_html | truncatewords: 50, "" %}
      {% endif %} <!--title below is coming from _includes/dynamic_title-->

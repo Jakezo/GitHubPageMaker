@@ -198,7 +198,7 @@ body {
     align-items: flex-start;
     overflow-y: hidden;
     height: 40px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 .site-nav-left {
@@ -229,7 +229,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin-right: 24px;
     padding: 11px 0;
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 2.0rem;
     line-height: 1em;
     font-weight: bold;
     letter-spacing: -0.5px;
@@ -250,6 +250,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0 -12px;
     padding: 0;
     list-style: none;
+    font-family: 'DX새날B', serif;
+    font-weight: bolder;
+    font-size: larger;
+
 }
 
 .nav li {
@@ -412,6 +416,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 200px;
     background: var(--lightgrey) no-repeat center center;
     background-size: cover;
+
+
+
 }
 
 .post-card-content-link {
@@ -448,7 +455,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-excerpt {
-    font-family: Georgia, serif;
+    font-family: 'Nanum Gothic', serif;
+    font-weight: bolder;
 }
 
 .post-card-meta {
@@ -680,8 +688,15 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .kg-card-markdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     max-width: 920px;
 }
@@ -701,6 +716,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-comments,
 .footnotes {
     min-width: 100%;
+
 }
 
 .post-full-content li {
@@ -791,6 +807,7 @@ Usage (In Ghost editor):
     margin: 0 0 1.5em;
     padding: 0 1.5em;
     border-left: #3eb0ef 3px solid;
+    width: -moz-available;
 }
 
 .post-full-content blockquote p {
@@ -812,6 +829,7 @@ Usage (In Ghost editor):
     font-weight: 400!important;
     background: var(--whitegrey);
     border-radius: 3px;
+    font-family: 'Nanum Gothic', serif;
 }
 
 .post-full-content pre {
@@ -821,7 +839,7 @@ Usage (In Ghost editor):
     max-width: 100%;
     border: color(var(--darkgrey) l(-10%)) 1px solid;
     color: var(--whitegrey);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.5em;
     background: color(var(--darkgrey) l(-3%));
     border-radius: 5px;
@@ -832,6 +850,8 @@ Usage (In Ghost editor):
     font-size: inherit;
     line-height: inherit;
     background: transparent;
+    /* word-wrap:break-word; */
+    /* word-break 를 keep-all 로 수정하면 모바일에서 상태가 안좋다 나중에 알아보고 수정하자 12/20 */
 }
 
 .post-full-content pre code * {
@@ -1574,6 +1594,9 @@ Usage (In Ghost editor):
     .floating-header-title,
     .floating-header-divider {
         visibility: hidden;
+    }
+    .post-full-content {
+        font-size: 1.9rem;
     }
 }
 

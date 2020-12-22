@@ -13,7 +13,11 @@ author: Jakezo
 
 {% include jsp-table-of-contents.html %}
 
+>01_SERVLET/EX01/Ex02_servlet.java 설명
+
 01_SERVLET/EX01/Ex02_servlet.java 설명
+> **git commit -m “initial commit”**
+
 
 ~~~java
 package dao;

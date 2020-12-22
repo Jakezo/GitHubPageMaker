@@ -62,9 +62,9 @@ ul.table-of-contents-list, ol.table-of-contents-list {
 }
 
 ul.table-of-contents-list li, ol.table-of-contents-list li {
-    padding: 0px 0px 5px 5px;
+    padding: 0 0 1em 5px;
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 0.9em;
 }
 
 ul.table-of-contents-list li a, ol.table-of-contents-list li a {
@@ -665,4 +665,18 @@ All this is done for any sub-level being entered.
 
 .entry-title {
     font-size: large;
+}
+
+p > .highlighter-rouge {
+
+    border: 0;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #ff9b15;
+    background-color: #2b2b2b;
+    border-radius: 4px;
+    font-weight: 300!important;
+    line-height: 1.5em;
+    font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+
 }
