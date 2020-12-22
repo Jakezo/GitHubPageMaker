@@ -1,8 +1,9 @@
-#sudo: false
+
 language: ruby
 cache: bundler
 rvm:
   - 2.6.6
+  #sudo: false 이젠 안쓴대
 
 install:
   # Install Jekyll and dependencies
