@@ -9,7 +9,7 @@ install:
   - bundle install
 
 before_script:
-  - git config --global user.email "cakim21@naver.com"
+  - git config --global user.email "cakim21@naver.com"git submodule add https://github.com/Jakezo/jakezo.github.io.git output
   - git config --global user.name "Jakezo"
 
 script: bundle exec rake site:deploy --quiet #--trace
@@ -21,11 +21,12 @@ script: bundle exec rake site:deploy --quiet #--trace
 # travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
 env:
   global:
-    secure: "TslYphKFNadjC7o66krnNj4v+eHmnX4ieolBb5lz7Z/3PkrGSsTePRC+P4NexKFvAE15K83vSTmF9y+MP8lHquGhppOpHfM6O81LBeWFC5qPCK8vUbfz2O2N7EGN/Kdfy1rQQ8F0ZawznVXTXRdJxLimmKC
-            izVtUf0Tutp0q32YCk1bAz3lOBgPqDM8/OlvoQl3EBRqzC40onQVM1yW3nWnFB7qOlrH0c0SsChV8DN6LamYnye23GnHo5X5lHlg//JfHVPaRqjwJVP+bDldS4YD7AjEilEy4yuce0S6rz0NQLoYFrbdhS5aaG1uHjTdow
-            nSBTKYrnLBFVxuT6eTrflL9IITNYVH0JzmzIQ74+frBdeYacaFWpQax0YFabUdFTsEifEtApcNHkXSP10dJx4DhHIX1TW4qBANXiwKbN0waVoOc6+q/3CkGeSdKppHToNOb0jt9edrvAXxG+QgmUeOP7byNVGcSo0iS5OQ
-            hsaLLgshNlwxkgPs8sbTmoT5SKzNoMMuhdtgshqLhoCZxFokVoXU28QFfdAb3bmT4A27sjGgjN5/yO/EfAHyxCe+Ka4EFka+Y5g0Zzm6qBKJUyIzTLNW974xDNghO1AckuLCzMjnLNOGNwWKLRzoKxrNGXwmcMV1MP1D/D
-            L7aWZpoP5XWWCCIQm6tN+s16wAMBx8="
+    secure: "TPcjB+P4r+z5TRm/wT63ivp8PMvMf/e8UbuSliU4P67Xec9EpM06rXVq+O0s1Rnp5GyInu/fBtwm8W2ZS/fSfvQ50VUUz0dJ/CAOvIpQdL0qBYBXUkPH//cU8/68OiJ1FPZPzHFcCOJiF7KuZH5UmGEoc6f
+            Hyt/UWxlDckebZloZM8p1LGc95fAEirTjYkVkXYyOUCyCYQuMoXhtf81DlNLZAo/eFI3gldjFmtcFfR2dMxBu7LtgIagDeFxzpo2zsoPtXQO64dg2Dy4r5fY1SQwMCclDpwqgWSd5RIpr08uj25O9uLhkPfNmMPsUMiPYF
+            PRfgGsIogEBtwtoOHnTAmiJIYoWi7TI8c/qpVopjN99wHyUHsfRkDfVqeU12e9bhDTbP7A0GoajSLSThzLYTT5lm61om5WkQfCZP+CdhYaCzl86bx4RNSEin+2y1JNbvpOExgLa0A6rBfiWH6XzR8stFTs/r/yIOIO8oSK
+            YuJ47u6ozy1ST97el8fSUtDIeEP2WSsUNABHt/MXrip2YS5VOniH4CMAQ+HwZ7p6ZNGXit8cwiJ3ZZMtMblm35mxNeuj6tY6DXBT8vqa/G3XlFP1v/TpcGggNoC5sT4yHmhIYb+Z2Yn2D+aToFQD1EKl65JrtOZSFZ6CG7
+            4AIvRbDA+C+ba/YBfVk5ORov9lhVlM="
+
 branches:
   only:
     - master
